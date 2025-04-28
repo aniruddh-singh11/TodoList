@@ -1,0 +1,82 @@
+html, body{
+    height: 100%;
+}
+body{
+    background: linear-gradient(to bottom right, navy, rgb(11, 180, 236));
+    background-attachment: fixed;
+    font-family:'Courier New', Courier, monospace;
+
+}
+.main-header{
+    padding-top: 150px;
+    text-align: center;
+    font-size: 40px;
+}
+.add-form{
+    border: 1px solid black;
+    margin-top: 100px;
+    margin-left: 450px;
+    margin-right: 450px;
+    background-color: rgb(235, 235, 235);    
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.add-form-header{
+    text-align: center;
+    font-size: 32px;
+}
+.add-section{
+    display: flex;
+}
+.task-bar{
+    border-radius: 10px;
+    border-color: rgb(199, 196, 196);
+    width: 300px;
+    height: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-right: 5px;
+}
+.add-button{
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color:rgb(254, 178, 38);
+    cursor: pointer;
+    margin-top: 20px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+.task-list{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.task{
+    width: 700px;
+    height: 30px;
+    border-width: 1px;
+    border-radius: 5px;
+    display: flex;
+    background-color: rgb(254, 178, 38);
+    justify-content: space-between;
+    align-items: center;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+.task-label{
+    margin-left: 50px;
+    font-size: 20px;
+}
+.task-delete-button{
+    margin-right: 50px;
+    height: 25px;
+    width: 70px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border-width: 0px;
+}
