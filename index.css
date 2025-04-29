@@ -79,4 +79,5 @@ body{
     color: white;
     border-radius: 5px;
     border-width: 0px;
+    cursor: pointer;
 }

@@ -12,14 +12,21 @@ function addTasksHTML(task){
             </button>
         </div>
     `;
-    document.querySelector('.task-list').innerHTML = tasksHTML; // Make sure to use '.task-list'
+    document.querySelector('.task-list').innerHTML = tasksHTML; 
 }
 
 function renderTasks(){
+    tasksHTML = '';
     tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     tasks.forEach(task => {
         addTasksHTML(task);
     });
+    let buttons = document.querySelectorAll('.task-delete-button');
+    buttons.forEach((btn, i) =>{
+        btn.addEventListener('click', () =>{
+            deleteTask(i);
+        });
+    })
 }
 
 function addClick(){
@@ -37,10 +44,17 @@ function saveToStorage(){
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+function deleteTask(i){
+    tasks.splice(i, 1);
+    saveToStorage();
+    renderTasks();
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
     let button = document.querySelector('.add-button');
     button.addEventListener("click", addClick);  
     renderTasks(); // Load tasks from localStorage when the page loads  
+
     console.log('js loaded');
 });
